@@ -1,17 +1,16 @@
 package com.example.project;
 
-/**
- * Класс Saf — добавлен в рамках лабораторной работы №10
- */
 public class Saf {
     private String name;
     private int age;
     private String group;
+    private String email;   // новое поле
 
-    public Saf(String name, int age, String group) {
+    public Saf(String name, int age, String group, String email) {
         this.name = name;
         this.age = age;
         this.group = group;
+        this.email = email;
     }
 
     public String getName() { return name; }
@@ -23,8 +22,22 @@ public class Saf {
     public String getGroup() { return group; }
     public void setGroup(String group) { this.group = group; }
 
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    /**
+     * Новый метод: вывод информации
+     */
+    public void printInfo() {
+        System.out.println("Saf: " + name +
+                           ", возраст: " + age +
+                           ", группа: " + group +
+                           ", email: " + email);
+    }
+
     @Override
     public String toString() {
-        return "Saf{name='" + name + "', age=" + age + ", group='" + group + "'}";
+        return "Saf{name='" + name + "', age=" + age +
+               ", group='" + group + "', email='" + email + "'}";
     }
 }
